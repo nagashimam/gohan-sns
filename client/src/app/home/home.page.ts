@@ -1,6 +1,7 @@
 import { AfterContentChecked, AfterViewInit, Component } from '@angular/core';
 import { QuizService } from '../state/quiz/quiz.service';
 import { QuizQuery } from '../state/quiz/quiz.query';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,11 @@ export class HomePage {
   quizes$ = this.query.selectAll();
   readonly appName = '鹿児島クイズ';
 
-  constructor(private quizeService: QuizService, private query: QuizQuery) {
+  constructor(
+    private quizeService: QuizService,
+    private query: QuizQuery,
+    private navController: NavController
+  ) {
     this.quizeService.get().subscribe();
   }
 
@@ -21,6 +26,10 @@ export class HomePage {
 
   callFilter(query: string = '') {
     requestAnimationFrame(() => this.filter(query));
+  }
+
+  public showDetail() {
+    this.navController.navigateForward('detail');
   }
 
   private filter(query: string = '') {
