@@ -5,7 +5,7 @@
       "link": "https://twitter.com/kagoshima_q_amb/status/1365553267996954629",
       "title": "黒豚",
       "question": "黒豚1頭飼育するのに何年かかるでしょう",
-      "deadlineInUnix": "1614496597",
+      "deadlineInUnix": "1613805397",
       "options": ["1. 1年", "2. 3年", "3. 5年"],
       "answer": "1. 1年"
     },
@@ -23,9 +23,9 @@
       "link": "https://twitter.com/kagoshima_q_amb/status/1365553267996954629",
       "title": "せごどん",
       "question": "せごどんが西南の役で死んだときには何歳?",
-      "deadlineInUnix": "1614496597",
-      "options": ["1. 1年", "2. 3年", "3. 5年"],
-      "answer": ["1. 40才", "2. 50才", "3. 60才"]
+      "deadlineInUnix": "1613805397",
+      "options": ["1. 40才", "2. 50才", "3. 60才"],
+      "answer": "1. 40才"
     },
     {
       "id": "3",
@@ -41,7 +41,7 @@
       "link": "https://twitter.com/kagoshima_q_amb/status/1365553267996954629",
       "title": "桜島大根",
       "question": "桜島大根は大きいもので直径何CMぐらいになるでしょう",
-      "deadlineInUnix": "1613805397",
+      "deadlineInUnix": "1614496597",
       "options": ["1. 15CM", "2. 30CM", "3. 60CM"],
       "answer": "1. 15CM"
     },
@@ -51,35 +51,8 @@
       "title": "せごどん",
       "question": "せごどんが西南の役で死んだときには何歳?",
       "deadlineInUnix": "1614496597",
-      "options": ["1. 1年", "2. 3年", "3. 5年"],
-      "answer": ["1. 40才", "2. 50才", "3. 60才"]
-    },
-    {
-      "id": "6",
-      "link": "https://twitter.com/kagoshima_q_amb/status/1365553267996954629",
-      "title": "黒豚",
-      "question": "黒豚1頭飼育するのに何年かかるでしょう",
-      "deadlineInUnix": "1614496597",
-      "options": ["1. 1年", "2. 3年", "3. 5年"],
-      "answer": "1. 1年"
-    },
-    {
-      "id": "7",
-      "link": "https://twitter.com/kagoshima_q_amb/status/1365553267996954629",
-      "title": "桜島大根",
-      "question": "桜島大根は大きいもので直径何CMぐらいになるでしょう",
-      "deadlineInUnix": "1613805397",
-      "options": ["1. 15CM", "2. 30CM", "3. 60CM"],
-      "answer": "1. 15CM"
-    },
-    {
-      "id": "8",
-      "link": "https://twitter.com/kagoshima_q_amb/status/1365553267996954629",
-      "title": "せごどん",
-      "question": "せごどんが西南の役で死んだときには何歳?",
-      "deadlineInUnix": "1614496597",
-      "options": ["1. 1年", "2. 3年", "3. 5年"],
-      "answer": ["1. 40才", "2. 50才", "3. 60才"]
+      "options": ["1. 40才", "2. 50才", "3. 60才"],
+      "answer": "1. 40才"
     }
   ]
 }
