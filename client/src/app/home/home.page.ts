@@ -14,4 +14,8 @@ export class HomePage {
   constructor(private quizeService: QuizService, private query: QuizQuery) {
     this.quizeService.get().subscribe();
   }
+
+  isOver(deadline: number) {
+    return deadline >= Date.now() / 1000;
+  }
 }

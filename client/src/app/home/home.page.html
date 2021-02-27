@@ -21,24 +21,35 @@
         <ion-text>
           <p>{{quiz.question}}</p>
         </ion-text>
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label> 選択肢 </ion-label>
-          </ion-list-header>
-
-          <ion-item>
-            <ion-label>{{quiz.options[0]}}</ion-label>
-            <ion-radio value="first"></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label>{{quiz.options[1]}}</ion-label>
-            <ion-radio value="second"></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label>{{quiz.options[2]}}</ion-label>
-            <ion-radio value="third"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
+        <ng-container *ngIf="isOver(quiz.deadlineInUnix); then show, else go">
+        </ng-container>
+        <ng-template #show>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label> 選択肢 </ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label>{{quiz.options[0]}}</ion-label>
+              <ion-radio value="first"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>{{quiz.options[1]}}</ion-label>
+              <ion-radio value="second"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>{{quiz.options[2]}}</ion-label>
+              <ion-radio value="third"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+          <ion-button>
+            <ion-label>答えを見る</ion-label>
+          </ion-button>
+        </ng-template>
+        <ng-template #go>
+          <ion-button>
+            <ion-label>回答ページへGO</ion-label>
+          </ion-button>
+        </ng-template>
       </ion-card-content>
     </ion-card>
   </ion-list>
