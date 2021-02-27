@@ -1,20 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> {{appName}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">{{appName}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-card>
+      <img src="/assets/madison.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>{{appName}}</ion-card-subtitle>
+        <ion-card-title>クイズのタイトル</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-text>
+          <p>クイズの問題</p>
+        </ion-text>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label> 選択肢 </ion-label>
+          </ion-list-header>
+
+          <ion-item>
+            <ion-label>1. 1つ目の選択肢</ion-label>
+            <ion-radio value="first"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>2. 2つ目の選択肢</ion-label>
+            <ion-radio value="second"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>3. 3つ目の選択肢</ion-label>
+            <ion-radio value="third"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>

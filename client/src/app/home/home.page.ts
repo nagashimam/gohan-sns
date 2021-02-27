@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  public readonly appName = '鹿児島クイズ';
 
   constructor() {}
-
 }
