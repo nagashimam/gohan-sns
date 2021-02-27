@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { QuizService } from '../state/quiz/quiz.service';
+import { QuizQuery } from '../state/quiz/quiz.query';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  public readonly appName = '鹿児島クイズ';
+  quizes$ = this.query.selectAll();
+  readonly appName = '鹿児島クイズ';
 
-  constructor() {}
+  constructor(private quizeService: QuizService, private query: QuizQuery) {
+    this.quizeService.get().subscribe();
+  }
 }
