@@ -11,16 +11,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
+  <ion-list *ngFor="let quiz of (quizes$ | async)">
     <ion-card>
       <img src="/assets/madison.jpg" />
       <ion-card-header>
         <ion-card-subtitle>{{appName}}</ion-card-subtitle>
-        <ion-card-title>クイズのタイトル</ion-card-title>
+        <ion-card-title>{{quiz.title}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-text>
-          <p>クイズの問題</p>
+          <p>{{quiz.question}}</p>
         </ion-text>
         <ion-radio-group>
           <ion-list-header>
@@ -28,15 +28,15 @@
           </ion-list-header>
 
           <ion-item>
-            <ion-label>1. 1つ目の選択肢</ion-label>
+            <ion-label>{{quiz.options[0]}}</ion-label>
             <ion-radio value="first"></ion-radio>
           </ion-item>
           <ion-item>
-            <ion-label>2. 2つ目の選択肢</ion-label>
+            <ion-label>{{quiz.options[1]}}</ion-label>
             <ion-radio value="second"></ion-radio>
           </ion-item>
           <ion-item>
-            <ion-label>3. 3つ目の選択肢</ion-label>
+            <ion-label>{{quiz.options[2]}}</ion-label>
             <ion-radio value="third"></ion-radio>
           </ion-item>
         </ion-radio-group>
