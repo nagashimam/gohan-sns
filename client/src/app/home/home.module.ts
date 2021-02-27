@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -13,9 +13,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    HttpClientModule,
+    FlexLayoutModule,
   ],
   declarations: [HomePage],
-  providers: [HttpClient],
 })
 export class HomePageModule {}

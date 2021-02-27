@@ -10,9 +10,8 @@
       <ion-title size="large">{{appName}}</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <ion-list *ngFor="let quiz of (quizes$ | async)">
-    <ion-card>
+  <ion-list fxLayout="row wrap">
+    <ion-card *ngFor="let quiz of (quizes$ | async)">
       <img src="/assets/madison.jpg" />
       <ion-card-header>
         <ion-card-subtitle>{{appName}}</ion-card-subtitle>
