@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@capacitor/core": "2.4.6",
+    "@datorama/akita": "^6.0.0",
+    "@datorama/akita-ng-entity-service": "^6.0.0",
     "@ionic/angular": "^5.5.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -50,5 +52,9 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "akitaCli": {
+    "customFolderName": "true",
+    "template": "angular"
+  }
 }
