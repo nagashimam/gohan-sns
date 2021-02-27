@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, Component } from '@angular/core';
 import { QuizService } from '../state/quiz/quiz.service';
 import { QuizQuery } from '../state/quiz/quiz.query';
 
@@ -17,5 +17,18 @@ export class HomePage {
 
   isOver(deadline: number) {
     return deadline >= Date.now() / 1000;
+  }
+
+  callFilter(query: string = '') {
+    requestAnimationFrame(() => this.filter(query));
+  }
+
+  private filter(query: string = '') {
+    const cards = Array.from(document.querySelectorAll('ion-card'));
+    cards.forEach((card) => {
+      const header = card.querySelector('ion-card-header');
+      const shouldShow = header.textContent.indexOf(query) > -1;
+      card.style.display = shouldShow ? 'block' : 'none';
+    });
   }
 }
